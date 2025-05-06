@@ -1,0 +1,183 @@
+/* Reset básico */
+body, h1, h2, p, ul, ol, blockquote {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo geral da página */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4e8e2; /* Bege pêssego suave */
+    color: #5b3a29; /* Marrom escuro suave para contraste */
+}
+
+/* Cabeçalho */
+header {
+    background: #f5b7a7; /* Pêssego claro */
+    color: #5b3a29; /* Marrom escuro suave para texto */
+    padding: 20px 30px;
+    text-align: center;
+    border-bottom: 3px solid #f2a89e; /* Pêssego suave */
+}
+
+header h1 {
+    font-size: 2.5em; /* Tamanho maior para destaque */
+    margin-bottom: 0.5em;
+}
+
+header p {
+    font-size: 1.2em;
+    margin: 0;
+}
+
+/* Conteúdo principal */
+main {
+    padding: 20px;
+    max-width: 800px; /* Largura máxima para melhor leitura */
+    margin: 20px auto; /* Centralizar no meio da página e espaçamento vertical */
+    background-color: #ffffff; /* Fundo branco para contraste */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
+    
+    /*
+    text-align: justify; /* Justifica o texto */
+    /*
+    letter-spacing: 0.5px; /* Ajusta o espaçamento entre letras (opcional) */
+    /*
+    line-height: 1.5; /* Aumenta o espaçamento entre linhas */
+
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+h2 {
+    border-bottom: 2px solid #f5b7a7; /* Linha abaixo do título em pêssego claro */
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    color: #f2a89e; /* Pêssego suave para títulos */
+    font-size: 1.8em; /* Tamanho maior para títulos */
+    text-align: left;
+}
+
+
+p {
+   text-align: justify;
+   padding: 4px; 
+}
+
+a {
+    color: #f2a89e; /* Pêssego suave para links */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #f5b7a7; /* Pêssego claro ao passar o mouse */
+}
+
+ul, ol {
+    margin-left: 50px;
+    margin-top: 25px;
+}
+
+ul li, ol li {
+    margin-bottom: 10px; /* Ajuste o valor conforme necessário */
+}
+
+blockquote {
+    background: #ffffff; /* Fundo branco para destaque */
+    border-left: 5px solid #f5b7a7; /* Borda lateral em pêssego claro */
+    padding: 15px 20px;
+    margin: 20px 0;
+    font-style: italic;
+    color: #5b3a29; /* Marrom escuro suave para texto */
+    border-radius: 4px; /* Bordas arredondadas */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve */
+}
+
+/* Estilo do modal */
+.modal {
+    display: none; /* Esconde o modal por padrão */
+    position: fixed; /* Fica fixo na tela */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    z-index: 1000; /* Garante que o modal fique sobre outros elementos */
+    
+}
+
+.modal-content {
+    background: #ffffff; /* Fundo branco para o modal */
+    padding: 20px;/*espaçamento interno*/
+    border-radius: 8px; /* Bordas arredondadas */
+    max-width: 90%; /* Largura máxima */
+    max-height: 90%; /* Altura máxima */
+    /*
+    width: 90%;
+    */
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra leve */
+    overflow: auto; /* Adiciona rolagem se necessário */
+}
+
+.close {
+    position: absolute; /* Posiciona o botão de fechar */
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer; /* Muda o cursor para indicar clicável */
+    color: #f5b7a7; /* Pêssego claro para o botão de fechar */
+}
+
+.close:hover {
+    color: #f2a89e; /* Pêssego suave ao passar o mouse */
+}
+
+/* Adiciona um pouco de espaçamento ao redor do modal quando visível */
+.modal.show {
+    display: flex;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse; /* Remove espaços entre as bordas das células */
+    margin: 20px 0; /* Adiciona espaçamento acima e abaixo da tabela */
+}
+
+th, td {
+    border: 1px solid #ddd; /* Borda cinza clara para as células */
+    padding: 8px; /* Espaçamento interno das células */
+    text-align: left; /* Alinhamento do texto à esquerda */
+}
+
+th {
+    background-color: #f4f4f4; /* Cor de fundo para as células de cabeçalho */
+    font-weight: bold; /* Negrito para o texto do cabeçalho */
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9; /* Cor de fundo alternada para as linhas */
+}
+
+tr:hover {
+    background-color: #f1f1f1; /* Cor de fundo ao passar o mouse sobre as linhas */
+}
+
+
+@media (max-width: 600px) {
+    #modal-content {
+        max-width: 100%; /* Ajusta a largura máxima em dispositivos menores */
+        max-height: 100%; /* Ajusta a altura máxima em dispositivos menores */
+        padding: 10px; /* Menos padding em dispositivos menores */
+    }
+}
