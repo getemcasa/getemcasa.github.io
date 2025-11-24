@@ -1,0 +1,85 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BASE */
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f5f0eb; /* Igual ao index */
+    color: #4a372b; /* Marrom padrão */
+    line-height: 1.6;
+}
+
+/* HEADER */
+.header {
+    padding: 35px 20px;
+    text-align: center;
+    background: #f7d6c6; /* Mesma cor do header do index */
+    border-bottom: 3px solid #eac7b8; 
+}
+
+.header h1 {
+    font-size: 2.2rem;
+    color: #4a2f26;
+}
+
+.header p {
+    font-size: 1.2rem;
+    color: #7c584a; /* Marrom mais suave */
+}
+
+/* CONTEÚDO */
+.conteudo {
+    max-width: 850px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+/* SEÇÕES */
+section {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 35px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.08);
+}
+
+section h2 {
+    color: #d58b74; /* Títulos iguais ao index */
+    margin-bottom: 15px;
+    font-size: 1.7rem;
+}
+
+section h3 {
+    color: #4a2f26; /* Título interno em marrom forte */
+    margin: 10px 0 5px;
+}
+
+/* BLOCKQUOTE */
+blockquote {
+    border-left: 4px solid #eac7b8; /* Mesmo tom de bordas */
+    padding-left: 15px;
+    margin-top: 15px;
+    font-style: italic;
+    color: #7c584a; /* Texto bíblico mais suave */
+}
+
+/* LISTAS */
+ul {
+    margin-left: 20px;
+}
+
+li {
+    margin-top: 15px;
+}
+
+/* FOOTER */
+.footer {
+    text-align: center;
+    padding: 20px;
+    color: #7c584a;
+    margin-bottom: 20px;
+}

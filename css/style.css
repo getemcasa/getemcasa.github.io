@@ -1,0 +1,232 @@
+/* ===========================
+   Devocional Moderno Premium
+   style.css
+   =========================== */
+
+/* --------------- PALETA --------------- */
+:root{
+  --bg: #f6f2ec;           /* papel claro */
+  --surface: #ffffff;      /* cards / fundo de conteúdo */
+  --text: #2f2a26;         /* marrom suave */
+  --muted: #6b5a52;        /* subtítulos */
+  --accent: #c99a4a;       /* dourado suave */
+  --accent-strong: #b07f2f;/* dourado mais forte (hovers) */
+  --border: #e8e3de;
+  --radius: 14px;
+  --shadow-sm: 0 6px 18px rgba(45,40,38,0.06);
+  --shadow-md: 0 10px 28px rgba(45,40,38,0.08);
+  --transition: 180ms ease;
+}
+
+/* --------------- RESET / BASE --------------- */
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.65;
+  padding: 28px 20px;
+}
+
+.lesson-body,
+.lesson-body p,
+.lesson-body div,
+.lesson-body blockquote,
+.lesson-body section {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+
+/* --------------- CONTAINER --------------- */
+.container{
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+/* --------------- HEADER / BRAND --------------- */
+.site-header{
+  background: linear-gradient(180deg, rgba(201,154,74,0.06), transparent 60%);
+  padding: 28px 0;
+  margin-bottom: 22px;
+  border-radius: 12px;
+  box-shadow: var(--shadow-sm);
+}
+.brand{ text-align:center; }
+.brand-title{
+  font-family: "Merriweather", serif;
+  font-weight:700;
+  color:var(--text);
+  font-size:1.9rem;
+  letter-spacing: -0.02em;
+}
+.brand-sub{
+  color:var(--muted);
+  margin-top:6px;
+  font-size:0.98rem;
+}
+
+/* --------------- INTRO --------------- */
+.intro{
+  background: var(--surface);
+  border:1px solid var(--border);
+  padding:18px 20px;
+  border-radius: 12px;
+  box-shadow: var(--shadow-sm);
+  margin-bottom:20px;
+}
+.intro-title{
+  font-family: "Merriweather", serif;
+  color:var(--text);
+  font-size:1.25rem;
+}
+.intro-text{ color:var(--muted); margin-top:8px; }
+
+/* --------------- LIÇÕES (INDEX) --------------- */
+.lessons{ margin-top: 6px; }
+.section-title{
+  font-family: "Merriweather", serif;
+  color:var(--text);
+  font-size:1.15rem;
+  margin-bottom: 12px;
+}
+.lessons-list{
+  list-style:none;
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+  gap:16px;
+}
+.lesson{
+  /* sem link externo: estilizar o pai */
+}
+.lesson-link{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+  padding:18px;
+  background:var(--surface);
+  border-radius:12px;
+  border:1px solid var(--border);
+  text-decoration:none;
+  color:inherit;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+}
+.lesson-link:hover{
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-md);
+  border-color: rgba(176,127,47,0.18);
+}
+.lesson-number{ font-weight:700; color:var(--muted); }
+.lesson-title{ font-family: "Merriweather", serif; font-weight:600; margin-top:4px; font-size:1rem; color:var(--text); }
+.lesson-meta{ color:var(--muted); font-size:0.92rem; }
+
+/* --------------- LAYOUT DA LIÇÃO --------------- */
+.lesson-header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  margin-bottom:18px;
+}
+.lesson-head{
+  text-align:left;
+}
+.lesson-name{
+  font-family:"Merriweather", serif;
+  font-size:1.6rem;
+  margin-bottom:6px;
+}
+.lesson-subtitle{ color:var(--muted); margin-bottom:4px; }
+
+/* micro ações */
+.lesson-actions{ display:flex; gap:10px; margin-top:6px; }
+.micro-btn{
+  background: transparent;
+  border:1px solid var(--border);
+  padding:6px 10px;
+  border-radius:10px;
+  cursor:pointer;
+  color:var(--muted);
+  font-weight:600;
+  transition: all var(--transition);
+}
+.micro-btn:hover{ border-color: var(--accent); color:var(--accent-strong); transform: translateY(-2px); }
+
+/* --------------- CONTEÚDO (tipografia estilo livro) --------------- */
+.lesson-body{
+  background: linear-gradient(180deg, rgba(255,255,255,0.8), rgba(255,255,255,0.95));
+  padding:26px;
+  border-radius:14px;
+  border:1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+}
+.section{ margin-bottom: 22px; }
+.section-title{
+  font-family: "Merriweather", serif;
+  color:var(--accent-strong);
+  font-size:1.1rem;
+  margin-bottom:10px;
+}
+p{ color:var(--text); font-size:1rem; margin-bottom:10px; }
+
+/* destaque de versículo */
+.verse{
+  background: linear-gradient(90deg, rgba(201,154,74,0.03), rgba(201,154,74,0.01));
+  border-left: 4px solid var(--accent);
+  padding:14px 16px;
+  border-radius:10px;
+  color:var(--text);
+  font-style: normal;
+  margin-top:8px;
+}
+
+/* pontos internos */
+.point{ margin:12px 0; padding-left:8px; }
+.point h3{ font-size:1rem; margin-bottom:6px; color:var(--text); font-weight:700; }
+
+/* --------------- BOTÃO VOLTAR (estilizado) --------------- */
+.btn-voltar{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  padding:10px 14px;
+  border-radius:10px;
+  background: transparent;
+  border: 1px solid rgba(0,0,0,0.04);
+  color:var(--text);
+  text-decoration:none;
+  font-weight:600;
+  transition: all var(--transition);
+}
+.btn-voltar svg{ color: var(--muted); }
+.btn-voltar:hover{
+  transform: translateX(-4px);
+  box-shadow: var(--shadow-sm);
+  border-color: rgba(176,127,47,0.12);
+}
+
+/* --------------- RODAPÉ --------------- */
+.site-footer{ margin-top:22px; text-align:center; color:var(--muted); font-size:0.95rem; }
+
+/* --------------- IMPRESSÃO / A11Y --------------- */
+@media print{
+  body{ background: #fff; padding: 0; color: #000; }
+  .btn-voltar, .micro-btn{ display:none; }
+  .lesson-body{ box-shadow: none; border: none; background: #fff; }
+}
+
+/* --------------- RESPONSIVIDADE --------------- */
+@media (max-width:900px){
+  .lessons-list{ grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); }
+  .brand-title{ font-size:1.6rem; }
+}
+@media (max-width:600px){
+  body{ padding:18px 14px; }
+  .lesson-header{ flex-direction:column; align-items:flex-start; gap:12px; }
+  .lesson-actions{ margin-top:0; }
+}
