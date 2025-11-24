@@ -1,116 +1,65 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grupo Familiar</title>
-    
-    <!-- FONTES -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-</head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Grupo Familiar — Apostila Digital</title>
 
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/script.js"></script>
+</head>
 <body>
-    <header>
-        <div class="container">
-            <h1>Grupo Familiar</h1>
-            <h3>Lições</h3>
-        </div>
+  <div class="page">
+    <header class="site-header container">
+      <div class="brand">
+        <h1 class="brand-title">Grupo Familiar</h1>
+        <p class="brand-sub">Apostila Digital — Estudos Bíblicos</p>
+      </div>
     </header>
 
-    <main class="container">
-        <section class="menu">
-            <div class="card">
-                <a href="licoes/licao01.html">
-                    <h2>Lição 01</h2>
-                    <p>Não pequeis mais</p>
-                </a>
-            </div>
-            <!--
-            <div class="card">
-                <a href="licoes/licao02.html">
-                    <h2>Lição 02</h2>
-                    <p>Amando como Jesus</p>
-                </a>
-            </div>
+    <main class="container main-section">
+      <section class="intro">
+        <h2 class="intro-title">Bem-vindo</h2>
+        <p class="intro-text">Aqui você encontra lições organizadas para estudo em grupo ou pessoal. Toque na lição para abrir o conteúdo de maneira fluida e agradável.</p>
+      </section>
 
-            <div class="card">
-                <a href="licoes/licao03.html">
-                    <h2>Lição 03</h2>
-                    <p>A necessidade de vivermos no centro da vontade de Deus</p>
-                </a>
-            </div>
+      <section class="lessons">
+        <h3 class="section-title">Lições</h3>
 
-            <div class="card">
-                <a href="licoes/licao04.html">
-                    <h2>Lição 04</h2>
-                    <p>Tempo de mudanças</p>
-                </a>
-            </div>
+        <ul class="lessons-list">
+          <li class="lesson">
+            <a class="lesson-link" href="licoes/licao01.html" aria-label="Abrir Lição 01 — Não pequeis mais">
+              <div class="lesson-info">
+                <h4 class="lesson-number">Lição 01</h4>
+                <p class="lesson-title">Como lidar com o cansaço emocional e espiritual</p>
+              </div>
+              <div class="lesson-meta">Ministro: David</div>
+            </a>
+          </li>
 
-            <div class="card">
-                <a href="licoes/licao05.html">
-                    <h2>Lição 05</h2>
-                    <p>Oração egoísta</p>
-                </a>
-            </div>
-
-            <div class="card">
-                <a href="licoes/licao06.html">
-                    <h2>Lição 06</h2>
-                    <p>Batismo com fogo - Estudo 01</p>
-                </a>
-            </div>
-
-            <div class="card">
-                <a href="licoes/licao07.html">
-                    <h2>Lição 07</h2>
-                    <p>Batismo com fogo - Estudo 02</p>
-                </a>
-            </div>
-
-            <div class="card">
-                <a href="licoes/licao08.html">
-                    <h2>Lição 08</h2>
-                    <p>Jesus o cordeiro de Deus</p>
-                </a>
-            </div>
-
-            <div class="card">
-                <a href="licoes/licao09.html">
-                    <h2>Lição 09</h2>
-                    <p>Foi pago um alto preço</p>
-                </a>
-            </div>
-
-            <div class="card">
-                <a href="licoes/licao10.html">
-                    <h2>Lição 10</h2>
-                    <p>Eu decido perdoar</p>
-                </a>
-            </div>
-
-            <div class="card">
-                <a href="licoes/licao11.html">
-                    <h2>Lição 11</h2>
-                    <p>Demonstrando meu amor por Jesus</p>
-                </a>
-            </div>
-
-            <div class="card">
-                <a href="licoes/licao12.html">
-                    <h2>Lição 12</h2>
-                    <p>Recebendo uma nova visão</p>
-                </a>
-            </div>
-            
-            -->
-        </section>
+          <!-- Exemplo para adicionar mais lições:
+          <li class="lesson">
+            <a class="lesson-link" href="licoes/licao02.html">
+              <div class="lesson-info">
+                <h4 class="lesson-number">Lição 02</h4>
+                <p class="lesson-title">O Espírito Santo em nós</p>
+              </div>
+              <div class="lesson-meta">Consolador e presença</div>
+            </a>
+          </li>
+          -->
+        </ul>
+      </section>
     </main>
-   
-    <footer>
+
+    <footer class="site-footer">
+      <div class="container">
         <p>© 2024 Jp - Desenvolvimento. Todos os direitos reservados.</p>
+      </div>
     </footer>
-  
+  </div>
 </body>
 </html>
